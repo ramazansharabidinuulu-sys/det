@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Билим Дүйнөсү - Балдар үчүн окуу платформасы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Негизги контейнер -->
+    <div id="app">
+        <!-- Башкы бет -->
+        <div id="home-screen" class="screen active">
+            <header class="main-header">
+                <div class="header-content">
+                    <h1 class="logo">🌟 Билим Дүйнөсү</h1>
+                    <div class="header-stats">
+                        <div class="stat-badge" id="total-stars">
+                            <span class="stat-icon">⭐</span>
+                            <span class="stat-value" id="stars-count">0</span>
+                        </div>
+                        <div class="stat-badge" id="total-tasks">
+                            <span class="stat-icon">✅</span>
+                            <span class="stat-value" id="tasks-count">0</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="home-main">
+                <div class="welcome-section">
+                    <div class="welcome-illustration">
+                        <div class="sun">☀️</div>
+                        <div class="clouds">☁️ ☁️</div>
+                        <div class="stars-decoration">✨ 🌟 ✨</div>
+                    </div>
+                    <h2 class="welcome-title">Кош келдиң! 👋</h2>
+                    <p class="welcome-subtitle">Бүгүн эмнени үйрөнөбүз?</p>
+                </div>
+
+                <!-- Күндөлүк план -->
+                <div class="daily-plan-section">
+                    <h3 class="section-title">📅 Бүгүнкү 20 мүнөт</h3>
+                    <div class="daily-plan">
+                        <div class="plan-item" data-subject="reading">
+                            <span class="plan-icon">📖</span>
+                            <span class="plan-text">5 мүнөт — Окуу</span>
+                            <div class="plan-progress"><div class="plan-progress-bar" style="width: 0%"></div></div>
+                        </div>
+                        <div class="plan-item" data-subject="math">
+                            <span class="plan-icon">🔢</span>
+                            <span class="plan-text">5 мүнөт — Математика</span>
+                            <div class="plan-progress"><div class="plan-progress-bar" style="width: 0%"></div></div>
+                        </div>
+                        <div class="plan-item" data-subject="logic">
+                            <span class="plan-icon">🧠</span>
+                            <span class="plan-text">5 мүнөт — Логика</span>
+                            <div class="plan-progress"><div class="plan-progress-bar" style="width: 0%"></div></div>
+                        </div>
+                        <div class="plan-item" data-subject="islam">
+                            <span class="plan-icon">🕌</span>
+                            <span class="plan-text">5 мүнөт — Исламий тарбия</span>
+                            <div class="plan-progress"><div class="plan-progress-bar" style="width: 0%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Негизги карточкалар -->
+                <div class="main-cards">
+                    <div class="card" data-section="reading">
+                        <div class="card-icon">📚</div>
+                        <div class="card-title">Окуйбуз</div>
+                        <div class="card-desc">Алфавит, тамгалар, муундар</div>
+                        <div class="card-stars">⭐ <span class="card-star-count">0</span></div>
+                    </div>
+                    <div class="card" data-section="math">
+                        <div class="card-icon">🔢</div>
+                        <div class="card-title">Математика</div>
+                        <div class="card-desc">Сандар, кошуу, кемитүү</div>
+                        <div class="card-stars">⭐ <span class="card-star-count">0</span></div>
+                    </div>
+                    <div class="card" data-section="logic">
+                        <div class="card-icon">🧠</div>
+                        <div class="card-title">Акылдуу оюндар</div>
+                        <div class="card-desc">Пазл, эс тутум, логика</div>
+                        <div class="card-stars">⭐ <span class="card-star-count">0</span></div>
+                    </div>
+                    <div class="card" data-section="world">
+                        <div class="card-icon">🌍</div>
+                        <div class="card-title">Дүйнөнү тааныйбыз</div>
+                        <div class="card-desc">Жаныбарлар, өсүмдүктөр</div>
+                        <div class="card-stars">⭐ <span class="card-star-count">0</span></div>
+                    </div>
+                    <div class="card" data-section="creativity">
+                        <div class="card-icon">🎨</div>
+                        <div class="card-title">Чыгармачылык</div>
+                        <div class="card-desc">Боёо, сүрөт тартуу</div>
+                        <div class="card-stars">⭐ <span class="card-star-count">0</span></div>
+                    </div>
+                    <div class="card" data-section="stories">
+                        <div class="card-icon">📖</div>
+                        <div class="card-title">Жомоктор</div>
+                        <div class="card-desc">Тарбиялык жомоктор</div>
+                        <div class="card-stars">⭐ <span class="card-star-count">0</span></div>
+                    </div>
+                    <div class="card" data-section="islam">
+                        <div class="card-icon">🕌</div>
+                        <div class="card-title">Ислам дүйнөсү</div>
+                        <div class="card-desc">Дубалар, адеп, тазалык</div>
+                        <div class="card-stars">⭐ <span class="card-star-count">0</span></div>
+                    </div>
+                    <div class="card" data-section="achievements">
+                        <div class="card-icon">🏆</div>
+                        <div class="card-title">Менин жетишкендиктерим</div>
+                        <div class="card-desc">Прогресс жана сыйлыктар</div>
+                        <div class="card-stars">⭐ <span class="card-star-count">0</span></div>
+                    </div>
+                </div>
+
+                <!-- Ата-эне бөлүмү -->
+                <div class="parent-section">
+                    <button class="parent-btn" id="parent-dashboard-btn">
+                        👨‍👩‍👧 Ата-эне бөлүмү
+                    </button>
+                </div>
+            </main>
+        </div>
+
+        <!-- Бөлүмдөр үчүн жалпы контейнер -->
+        <div id="section-screen" class="screen">
+            <header class="section-header">
+                <button class="back-btn" id="back-to-home">← Артка</button>
+                <h2 class="section-title" id="section-title-text"></h2>
+                <div class="section-stars">⭐ <span id="section-star-count">0</span></div>
+            </header>
+            <div class="section-content" id="section-content"></div>
+        </div>
+
+        <!-- Ата-эне dashboard -->
+        <div id="parent-screen" class="screen">
+            <header class="section-header">
+                <button class="back-btn" id="back-from-parent">← Артка</button>
+                <h2 class="section-title">👨‍👩‍👧 Ата-эне dashboard</h2>
+            </header>
+            <div class="parent-dashboard" id="parent-dashboard-content"></div>
+        </div>
+
+        <!-- Жетишкендиктер экраны -->
+        <div id="achievements-screen" class="screen">
+            <header class="section-header">
+                <button class="back-btn" id="back-from-achievements">← Артка</button>
+                <h2 class="section-title">🏆 Менин жетишкендиктерим</h2>
+            </header>
+            <div class="achievements-content" id="achievements-content"></div>
+        </div>
+
+        <!-- Жыйынтык модал -->
+        <div id="result-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-icon" id="modal-icon">🎉</div>
+                <h3 class="modal-title" id="modal-title">Мыкты!</h3>
+                <p class="modal-message" id="modal-message"></p>
+                <button class="modal-btn" id="modal-close">Улантуу →</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
